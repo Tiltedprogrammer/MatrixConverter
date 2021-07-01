@@ -133,3 +133,8 @@ main = hspec $ do
                                                                     QNone
                                                                     QNone
                                                                     (QNode (QVal 49) QNone QNone (QVal 64))) 
+
+        describe "qTreeToBoolTest" $ do
+            mtxQ1 <- runIO example1
+            it "qTreeToBool example1" $ let m1 = matrixMarketToQTree mtxQ1 in
+                qTreeToBool m1 `shouldBe` QNode (QNode (QVal True) (QVal True) (QVal True) QNone) QNone QNone QNone
