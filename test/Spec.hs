@@ -31,6 +31,13 @@ example4  = do
 
 
 
+example5 :: IO (MatrixMarket Int)
+example5  = do
+    cd <- getCurrentDirectory
+    readMtx $ cd </> "data" </> "exampleQTree2_unsorted.mtx"
+
+
+
 
 main :: IO ()
 main = hspec $ do
@@ -38,6 +45,9 @@ main = hspec $ do
             mtxQ1 <- runIO example1
             it "exampleQTree2.mtx which is 4x4 matrix with entries at (0,0,1), (0,1,1), (1,0,5)" $
                 matrixMarketToQTree mtxQ1 `shouldBe` QNode (QNode (QVal 1) (QVal 1) (QVal 5) QNone) QNone QNone QNone
+            mtxQ1_2 <- runIO example5
+            it "exampleQTree2_unsorted.mtx which is 4x4 matrix with entries at (0,0,1), (0,1,1), (1,0,5)" $
+                matrixMarketToQTree mtxQ1_2 `shouldBe` QNode (QNode (QVal 1) (QVal 1) (QVal 5) QNone) QNone QNone QNone
             mtxQ2 <- runIO example2
             it "exampleQTree3.mtx which is 8x8 matrix with one entry at (8,8,322)" $
                 matrixMarketToQTree mtxQ2 `shouldBe` QNode  QNone QNone QNone (QNode QNone
@@ -60,13 +70,13 @@ main = hspec $ do
         describe "mask test" $ do
             mtxQ1 <- runIO example3
             it "mask test on 8x8 diagonal matrix" $
-                 let mtxQ1Mask = MNode (MNode (MNode MVal MNone MNone MVal)
-                                                                    MNone
-                                                                    MNone
-                                                                    (MNode MVal MNone MNone MVal))
-                                        MNone
-                                        MNone
-                                        MNone in
+                 let mtxQ1Mask = MQNode (MQNode (MQNode MQVal MQNone MQNone MQVal)
+                                                                    MQNone
+                                                                    MQNone
+                                                                    (MQNode MQVal MQNone MQNone MQVal))
+                                        MQNone
+                                        MQNone
+                                        MQNone in
                                             mask (matrixMarketToQTree mtxQ1) mtxQ1Mask `shouldBe` QNode (QNode (QNode (QVal 1) QNone QNone (QVal 2))
                                                                     QNone
                                                                     QNone

@@ -11,8 +11,13 @@ data MatrixMarket a = MatrixMarket {rows :: Int, columns :: Int, nonzeroes :: In
 data MatrixMarketElem a = MatrixMarketElem {row :: Int, column :: Int, value :: a}
 
 data QTree a = QNone | QVal a | QNode (QTree a) (QTree a) (QTree a) (QTree a) | QError deriving (Eq)
-data MaskQTree = MNone | MVal | MNode MaskQTree MaskQTree MaskQTree MaskQTree deriving Show
+data MaskQTree = MQNone | MQVal | MQNode MaskQTree MaskQTree MaskQTree MaskQTree deriving (Eq)
 data QTreeCell = TL | TR | BL | BR -- top-left, top-right etc.
+
+instance Show MaskQTree where
+    show MQNone = "MQNone"
+    show MQVal = "MQVal"
+    show (MQNode tl tr bl br) = "MQNode (" ++ show tl ++ ", " ++ show tr ++ ", " ++ show bl ++ ", " ++ show br ++ ")"
 
 instance Show a => Show (QTree a) where
     show QNone = "QNone"
@@ -170,10 +175,10 @@ splitQMatrixMarket (row,column) MatrixMarket {rows = rows',
                                                                 MatrixMarket {rows = newRows, columns = newColumns, nonzeroes = length newEntries, entries = newEntries}
 
 qTreeToQMask :: QTree a -> MaskQTree
-qTreeToQMask QNone = MNone
-qTreeToQMask (QVal _) = MVal
+qTreeToQMask QNone = MQNone
+qTreeToQMask (QVal _) = MQVal
 qTreeToQMask QError = error "Can not turn QError to mask"
-qTreeToQMask (QNode tl tr bl br) = MNode (qTreeToQMask tl) (qTreeToQMask tr) (qTreeToQMask bl) (qTreeToQMask br)
+qTreeToQMask (QNode tl tr bl br) = MQNode (qTreeToQMask tl) (qTreeToQMask tr) (qTreeToQMask bl) (qTreeToQMask br)
 
 
 qTreeToBool :: QTree a -> QTree Bool

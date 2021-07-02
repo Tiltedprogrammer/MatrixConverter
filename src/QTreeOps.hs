@@ -73,11 +73,11 @@ mask = \m msk ->
     case m of{
          QError -> QError;
          QNone -> QNone;
-         QVal v1 -> case msk of {MNone -> QNone; MVal-> m;};
+         QVal v1 -> case msk of {MQNone -> QNone; MQVal-> m;};
          QNode q1 q2 q3 q4 -> case msk of {
-                                  MNone -> QNone; 
-                                  MVal -> m; 
-                                  MNode t1 t2 t3 t4 -> 
+                                  MQNone -> QNone; 
+                                  MQVal -> m; 
+                                  MQNode t1 t2 t3 t4 -> 
                                    QNode  (mask q1 t1) (mask q2 t2) (mask q3 t3) (mask q4 t4);};
                       };
                       
