@@ -3,6 +3,10 @@ module QTree where
 import System.IO
 import Data.List
 
+import Prelude hiding ((<>))
+
+import Text.PrettyPrint
+
 -- Need a way to dump QTree representation for further to-hardware transformation, e.g. show Val a == Val a, default deriving works well
 -- Need a way to convert file representation, e.g. mtx to QTree
 -- Tests to verify the correctnress of multiplication
@@ -14,16 +18,43 @@ data QTree a = QNone | QVal a | QNode (QTree a) (QTree a) (QTree a) (QTree a) | 
 data MaskQTree = MQNone | MQVal | MQNode MaskQTree MaskQTree MaskQTree MaskQTree deriving (Eq)
 data QTreeCell = TL | TR | BL | BR -- top-left, top-right etc.
 
-instance Show MaskQTree where
-    show MQNone = "MQNone"
-    show MQVal = "MQVal"
-    show (MQNode tl tr bl br) = "MQNode (" ++ show tl ++ ", " ++ show tr ++ ", " ++ show bl ++ ", " ++ show br ++ ")"
 
-instance Show a => Show (QTree a) where
-    show QNone = "QNone"
-    show (QVal a) = "(QVal (" ++ show a ++ "))"
-    show QError = "QError"
-    show (QNode tl tr bl br) = "QNode (" ++ show tl ++ ", " ++ show tr ++ ", " ++ show bl ++ ", " ++ show br ++ ")"
+data TextTree a = PoitinTextTree (QTree a) | HaskellTextTree (QTree a)
+data TextMask =  PoitinTextMask MaskQTree | HaskellTextMask MaskQTree
+
+class PP a where
+    pp :: a -> Doc
+
+instance (Show a) => PP (TextTree a) where
+
+    pp (PoitinTextTree QNone) = text "QNone"
+    pp (PoitinTextTree (QVal a)) = (text "QVal") <+> lparen <> (text (show a)) <> rparen
+    pp (PoitinTextTree (QError)) = text "QError"
+    pp (PoitinTextTree (QNode tl tr bl br)) = (text "QNode") <+> lparen <> hcat (punctuate comma [pp (PoitinTextTree tl), pp (PoitinTextTree tr), pp  (PoitinTextTree  bl), pp (PoitinTextTree br)]) <> rparen
+
+    pp (HaskellTextTree QNone) = text "QNone"
+    pp (HaskellTextTree (QVal a)) = lparen <> (text "QVal") <+> (text (show a)) <> rparen
+    pp (HaskellTextTree QError) = text "QError"
+    pp (HaskellTextTree (QNode tl tr bl br)) = lparen <> (text "QNode") <+> hcat (punctuate space [pp (HaskellTextTree tl), pp (HaskellTextTree tr), pp (HaskellTextTree bl), pp (HaskellTextTree br)]) <> rparen
+
+
+
+instance PP (TextMask) where
+
+    
+    pp (HaskellTextMask MQNone) = text "MQNone"
+    pp (HaskellTextMask MQVal) = text "MQVal"
+    pp (HaskellTextMask (MQNode tl tr bl br)) = lparen <> (text "MQNode") <+> hcat (punctuate space [pp (HaskellTextMask tl), pp (HaskellTextMask tr), pp (HaskellTextMask bl), pp (HaskellTextMask $ br)]) <> rparen
+    
+    pp (PoitinTextMask MQNone) = text "MQNone"
+    pp (PoitinTextMask MQVal) = text "MQVal"
+    pp (PoitinTextMask (MQNode tl tr bl br)) = (text "MQNode") <+> lparen <> hcat (punctuate comma [pp (PoitinTextMask tl), pp (PoitinTextMask tr), pp (PoitinTextMask bl), pp (PoitinTextMask br)]) <> rparen
+            
+
+instance Show (TextMask) where
+    show = render . pp
+instance Show a => Show (TextTree a) where
+    show = render . pp
 
 isCoordinate = elem "coordinate"
 isInteger = elem "integer"
@@ -180,6 +211,11 @@ qTreeToQMask (QVal _) = MQVal
 qTreeToQMask QError = error "Can not turn QError to mask"
 qTreeToQMask (QNode tl tr bl br) = MQNode (qTreeToQMask tl) (qTreeToQMask tr) (qTreeToQMask bl) (qTreeToQMask br)
 
+
+compressMask :: MaskQTree -> MaskQTree
+compressMask (MQNode MQVal MQVal MQVal MQVal) = MQVal
+compressMask (MQNode tl tr bl br) = MQNode (compressMask tl) (compressMask tr) (compressMask bl) (compressMask br)
+compressMask m = m
 
 qTreeToBool :: QTree a -> QTree Bool
 qTreeToBool QNone = QNone

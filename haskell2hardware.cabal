@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a896ea25a06a675070ba404e8895642ace468101e11691839e4b83b93c5fab9a
+-- hash: ce08a788f9b6d8d8d614a0cc2349ade56459621aa197cabd7f2fc017399a1150
 
 name:           haskell2hardware
 version:        0.1.0.0
@@ -27,6 +27,9 @@ source-repository head
 
 library
   exposed-modules:
+      Masks
+      Matrices
+      Playground
       QTree
       QTreeOps
   other-modules:
@@ -37,6 +40,7 @@ library
       base >=4.7 && <5
     , directory
     , filepath
+    , pretty ==1.1.3.6
   default-language: Haskell2010
 
 executable haskell2hardware-exe
@@ -51,6 +55,7 @@ executable haskell2hardware-exe
     , directory
     , filepath
     , haskell2hardware
+    , pretty ==1.1.3.6
   default-language: Haskell2010
 
 test-suite haskell2hardware-test
@@ -67,4 +72,5 @@ test-suite haskell2hardware-test
     , filepath
     , haskell2hardware
     , hspec ==2.*
+    , pretty ==1.1.3.6
   default-language: Haskell2010

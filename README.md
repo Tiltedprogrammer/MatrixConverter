@@ -1,18 +1,35 @@
 # haskell2hardware
 
-`stack build && stack run [params]`
+`stack build && stack run -- [params]`
 
-`params := ["qtree"|"mask"] "path-to-file-relative-to-data-folder"`, where "qtree" generates qtree represenation and mask converts a matrix to a mask.
+`stack run -- [options] file
+  -q[bool]  --qtree[=bool] Generate qtree representation of .mtx                      file, if 'bool' is specified Boolean qtree is dumped
+`
 
-### Example
+`
+  -m        --mask                     Generate a mask from .mtx
+`
+
+`
+--backend=haskell|=poitin  Choose backend: haskell for Haskell, poitin for distiller language
+`
+### Examples
 ----
-`stack build && stack run "qtree" "exampleQTree1.mtx"` will generate `QNode (QVal 1) (QVal 1) (QVal 5) QNone` 
+- `stack run -- -q=bool --backend=haskell data/test.mtx` will generate
 
-and
+  `(QNode (QNode (QVal True) QNone QNone (QVal True)) QNone QNone (QNode (QVal True) QNone QNone (QVal True)))` 
 
-`stack build && stack run "qtree" "exampleQTree1.mtx"` will yield 
+- `stack run -- -q --backend=haskell data/test.mtx` will yield
 
-`MNode MVal MVal MVal MNone` 
+  `(QNode (QNode (QVal 1) QNone QNone (QVal 1)) QNone QNone (QNode (QVal 1) QNone QNone (QVal 1)))`
+
+- `stack run -- -q --backend=poitin data/test.mtx` will yield 
+
+  `QNode (QNode (QVal (1),QNone,QNone,QVal (1)),QNone,QNone,QNode (QVal (1),QNone,QNone,QVal (1)))`
+
+- `stack run -- -q=bool --backend=poitin data/test.mtx `
+
+  `QNode (QNode (QVal (True),QNone,QNone,QVal (True)),QNone,QNone,QNode (QVal (True),QNone,QNone,QVal (True)))`
 
 
 ### Notes

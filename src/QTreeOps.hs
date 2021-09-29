@@ -3,26 +3,46 @@ module QTreeOps where
 import QTree
 
 
-eWiseAdd = \g m1 m2 -> 
-    case m1 of{
-         QError -> QError;
-         QNone -> case m2 of {QError -> QError; 
-                             QNone -> QNone; 
-                             QVal v -> m2; 
-                             QNode t1 t2 t3 t4 -> m2;};
-         QVal v1 -> case m2 of {QError -> QError; 
-                               QNone -> m1; 
-                               QVal v -> QVal (g v1 v); 
-                               QNode t1 t2 t3 t4 -> QError;};
-         QNode q1 q2 q3 q4 -> case m2 of {QError -> QError;
-                                         QNone -> m1; 
-                                         QVal v -> QError; 
-                                         QNode t1 t2 t3 t4 -> QNode 
-                                                                    (eWiseAdd g q1 t1) 
-                                                                    (eWiseAdd g q2 t2) 
-                                                                    (eWiseAdd g q3 t3) 
-                                                                    (eWiseAdd g q4 t4);};
-};
+nnz m = case m of
+     QVal _ -> 1
+     QNode tl tr bl br -> (nnz tl) + (nnz tr) + (nnz bl) + (nnz br)
+     QError -> error "QError encountered"
+     _ -> 0
+
+mapQ isZ f m = 
+    case m of
+         QError -> QError
+         QNone -> QNone
+         QVal v -> (mkQNode isZ (f v))
+         (QNode q1 q2 q3 q4) -> (reduceTree 
+                                     (mapQ isZ f q1) 
+                                     (mapQ isZ f q2) 
+                                     (mapQ isZ f q3) 
+                                     (mapQ isZ f q4));
+                      
+mkQNode isZ x = case (isZ x) of True -> QNone
+                                False -> (QVal x) 
+
+reduceTree n1 n2 n3 n4 = (QNode n1 n2 n3 n4)
+
+eWiseAdd isZ g m1 m2 = 
+    case m1 of
+         QError -> QError
+         QNone -> (m2)
+         (QVal v1) -> (case m2 of 
+                        QError -> QError 
+                        QNone -> m1 
+                        (QVal v) -> (mkQNode isZ (g v1 v))
+                        (QNode t1 t2 t3 t4) -> QError)
+         (QNode q1 q2 q3 q4) -> (case m2 of 
+                                    QError -> QError
+                                    QNone -> m1 
+                                    (QVal v) -> QError 
+                                    (QNode t1 t2 t3 t4) -> (reduceTree 
+                                                                    (eWiseAdd isZ g q1 t1) 
+                                                                    (eWiseAdd isZ g q2 t2)
+                                                                    (eWiseAdd isZ g q3 t3) 
+                                                                    (eWiseAdd isZ g q4 t4)))
 
 eWiseMult = \g m1 m2 -> 
     case m1 of{
@@ -42,32 +62,21 @@ eWiseMult = \g m1 m2 ->
                                                                     (eWiseMult g q1 t1) 
                                                                     (eWiseMult g q2 t2) 
                                                                     (eWiseMult g q3 t3) 
-                                                                    (eWiseMult g q4 t4);};
-};
+                                                                    (eWiseMult g q4 t4);}}
 
+kron isZ g m1 m2 =
+    case m1 of 
+         QError -> QError
+         QNone -> QNone
+         (QVal v) -> (mapQ isZ (g v) m2)
+         (QNode q1 q2 q3 q4) -> (reduceTree 
+                                      (kron isZ g q1 m2) 
+                                      (kron isZ g q2 m2) 
+                                      (kron isZ g q3 m2) 
+                                      (kron isZ g q4 m2))
 
-mMult = \g h m1 m2 -> 
-    case m1 of {
-         QError -> QError;
-         QNone -> QNone;
-         QVal v1 -> 
-             case m2 of {
-                  QError -> QError; 
-                  QNone -> QNone; 
-                  QVal v -> QVal (h v1 v); 
-                  QNode t1 t2 t3 t4 -> QError;
-             };
-         QNode q1 q2 q3 q4 -> 
-              case m2 of {
-                   QError -> QError;
-                   QNone -> QNone; 
-                   QVal v -> QError;
-                   QNode t1 t2 t3 t4 -> QNode
-                                               (eWiseAdd g (mMult g h q1 t1)(mMult g h q2 t3)) 
-                                               (eWiseAdd g (mMult g h q1 t2)(mMult g h q2 t4)) 
-                                               (eWiseAdd g (mMult g h q3 t1)(mMult g h q4 t3)) 
-                                               (eWiseAdd g (mMult g h q3 t2)(mMult g h q4 t4));};
-};
+;
+
 
 mask = \m msk ->
     case m of{
