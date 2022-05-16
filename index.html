@@ -1,556 +1,587 @@
-<head>
-    <title>Benchmarks results for distilled sparse linear Algebra</title>
-  
-    <meta charset="utf-8">
-    <meta name="viewport" 
-          content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-</head>
-
 <div align="center">
                     <h2>mAddAdd</h2>
                   </div><div class="container-fluid"><div class="row"><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_42495_" ><caption>haskell</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_75853_" ><caption>haskell</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_42495_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
-                        <td id="T_42495_row0_col0" class="data row0 col0" >15354</td>
+                        <th id="T_75853_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
+                        <td id="T_75853_row0_col0" class="data row0 col0" >94</td>
             </tr>
             <tr>
-                        <th id="T_42495_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
-                        <td id="T_42495_row1_col0" class="data row1 col0" >18835</td>
+                        <th id="T_75853_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
+                        <td id="T_75853_row1_col0" class="data row1 col0" >123</td>
             </tr>
             <tr>
-                        <th id="T_42495_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
-                        <td id="T_42495_row2_col0" class="data row2 col0" >43740</td>
+                        <th id="T_75853_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
+                        <td id="T_75853_row2_col0" class="data row2 col0" >219</td>
             </tr>
             <tr>
-                        <th id="T_42495_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
-                        <td id="T_42495_row3_col0" class="data row3 col0" >11857</td>
+                        <th id="T_75853_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
+                        <td id="T_75853_row3_col0" class="data row3 col0" >29</td>
             </tr>
     </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_558c0_" ><caption>haskell_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_ecbf3_" ><caption>haskell_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_558c0_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
-                        <td id="T_558c0_row0_col0" class="data row0 col0" >10024</td>
+                        <th id="T_ecbf3_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
+                        <td id="T_ecbf3_row0_col0" class="data row0 col0" >79</td>
             </tr>
             <tr>
-                        <th id="T_558c0_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
-                        <td id="T_558c0_row1_col0" class="data row1 col0" >15240</td>
+                        <th id="T_ecbf3_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
+                        <td id="T_ecbf3_row1_col0" class="data row1 col0" >103</td>
             </tr>
             <tr>
-                        <th id="T_558c0_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
-                        <td id="T_558c0_row2_col0" class="data row2 col0" >11680</td>
+                        <th id="T_ecbf3_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
+                        <td id="T_ecbf3_row2_col0" class="data row2 col0" >143</td>
             </tr>
             <tr>
-                        <th id="T_558c0_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
-                        <td id="T_558c0_row3_col0" class="data row3 col0" >4572</td>
+                        <th id="T_ecbf3_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
+                        <td id="T_ecbf3_row3_col0" class="data row3 col0" >20</td>
             </tr>
     </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_6aec8_" ><caption>fhw_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>        <th class="col_heading level0 col1" >time_IO_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_8d11e_" ><caption>fhw_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>        <th class="col_heading level0 col1" >time_IO_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_6aec8_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
-                        <td id="T_6aec8_row0_col0" class="data row0 col0" >181349</td>
-                        <td id="T_6aec8_row0_col1" class="data row0 col1" >514099</td>
+                        <th id="T_8d11e_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
+                        <td id="T_8d11e_row0_col0" class="data row0 col0" >134</td>
+                        <td id="T_8d11e_row0_col1" class="data row0 col1" >469</td>
             </tr>
             <tr>
-                        <th id="T_6aec8_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
-                        <td id="T_6aec8_row1_col0" class="data row1 col0" >168091</td>
-                        <td id="T_6aec8_row1_col1" class="data row1 col1" >660537</td>
+                        <th id="T_8d11e_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
+                        <td id="T_8d11e_row1_col0" class="data row1 col0" >167</td>
+                        <td id="T_8d11e_row1_col1" class="data row1 col1" >661</td>
             </tr>
             <tr>
-                        <th id="T_6aec8_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
-                        <td id="T_6aec8_row2_col0" class="data row2 col0" >375035</td>
-                        <td id="T_6aec8_row2_col1" class="data row2 col1" >1093225</td>
+                        <th id="T_8d11e_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
+                        <td id="T_8d11e_row2_col0" class="data row2 col0" >375</td>
+                        <td id="T_8d11e_row2_col1" class="data row2 col1" >1093</td>
             </tr>
             <tr>
-                        <th id="T_6aec8_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
-                        <td id="T_6aec8_row3_col0" class="data row3 col0" >67731</td>
-                        <td id="T_6aec8_row3_col1" class="data row3 col1" >162401</td>
+                        <th id="T_8d11e_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
+                        <td id="T_8d11e_row3_col0" class="data row3 col0" >63</td>
+                        <td id="T_8d11e_row3_col1" class="data row3 col1" >158</td>
             </tr>
     </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_ad537_" ><caption>fhw</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>        <th class="col_heading level0 col1" >time_IO_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_f7af8_" ><caption>fhw</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>        <th class="col_heading level0 col1" >time_IO_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_ad537_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
-                        <td id="T_ad537_row0_col0" class="data row0 col0" >194662</td>
-                        <td id="T_ad537_row0_col1" class="data row0 col1" >527412</td>
+                        <th id="T_f7af8_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
+                        <td id="T_f7af8_row0_col0" class="data row0 col0" >146</td>
+                        <td id="T_f7af8_row0_col1" class="data row0 col1" >478</td>
             </tr>
             <tr>
-                        <th id="T_ad537_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
-                        <td id="T_ad537_row1_col0" class="data row1 col0" >193481</td>
-                        <td id="T_ad537_row1_col1" class="data row1 col1" >685927</td>
+                        <th id="T_f7af8_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
+                        <td id="T_f7af8_row1_col0" class="data row1 col0" >202</td>
+                        <td id="T_f7af8_row1_col1" class="data row1 col1" >681</td>
             </tr>
             <tr>
-                        <th id="T_ad537_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
-                        <td id="T_ad537_row2_col0" class="data row2 col0" >474345</td>
-                        <td id="T_ad537_row2_col1" class="data row2 col1" >1192535</td>
+                        <th id="T_f7af8_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
+                        <td id="T_f7af8_row2_col0" class="data row2 col0" >474</td>
+                        <td id="T_f7af8_row2_col1" class="data row2 col1" >1192</td>
             </tr>
             <tr>
-                        <th id="T_ad537_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
-                        <td id="T_ad537_row3_col0" class="data row3 col0" >75418</td>
-                        <td id="T_ad537_row3_col1" class="data row3 col1" >170088</td>
+                        <th id="T_f7af8_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
+                        <td id="T_f7af8_row3_col0" class="data row3 col0" >75</td>
+                        <td id="T_f7af8_row3_col1" class="data row3 col1" >170</td>
             </tr>
     </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_9fba1_" ><caption>cpp</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_c2596_" ><caption>cpp</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_9fba1_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
-                        <td id="T_9fba1_row0_col0" class="data row0 col0" >31459</td>
+                        <th id="T_c2596_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
+                        <td id="T_c2596_row0_col0" class="data row0 col0" >29</td>
             </tr>
             <tr>
-                        <th id="T_9fba1_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
-                        <td id="T_9fba1_row1_col0" class="data row1 col0" >42324</td>
+                        <th id="T_c2596_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
+                        <td id="T_c2596_row1_col0" class="data row1 col0" >44</td>
             </tr>
             <tr>
-                        <th id="T_9fba1_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
-                        <td id="T_9fba1_row2_col0" class="data row2 col0" >49150</td>
+                        <th id="T_c2596_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
+                        <td id="T_c2596_row2_col0" class="data row2 col0" >49</td>
             </tr>
             <tr>
-                        <th id="T_9fba1_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
-                        <td id="T_9fba1_row3_col0" class="data row3 col0" >16241</td>
+                        <th id="T_c2596_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
+                        <td id="T_c2596_row3_col0" class="data row3 col0" >14</td>
             </tr>
     </tbody></table></div></div></div><div align="center">
                     <h2>mMapAdd</h2>
                   </div><div class="container-fluid"><div class="row"><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_0c084_" ><caption>haskell</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_1b5c8_" ><caption>haskell</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_0c084_level0_row0" class="row_heading level0 row0" >128x128_128x128</th>
-                        <td id="T_0c084_row0_col0" class="data row0 col0" >35292</td>
+                        <th id="T_1b5c8_level0_row0" class="row_heading level0 row0" >128x128_128x128</th>
+                        <td id="T_1b5c8_row0_col0" class="data row0 col0" >162</td>
             </tr>
             <tr>
-                        <th id="T_0c084_level0_row1" class="row_heading level0 row1" >256x256_256x256</th>
-                        <td id="T_0c084_row1_col0" class="data row1 col0" >46338</td>
+                        <th id="T_1b5c8_level0_row1" class="row_heading level0 row1" >256x256_256x256</th>
+                        <td id="T_1b5c8_row1_col0" class="data row1 col0" >312</td>
             </tr>
             <tr>
-                        <th id="T_0c084_level0_row2" class="row_heading level0 row2" >512x512_512x512</th>
-                        <td id="T_0c084_row2_col0" class="data row2 col0" >125540</td>
+                        <th id="T_1b5c8_level0_row2" class="row_heading level0 row2" >512x512_512x512</th>
+                        <td id="T_1b5c8_row2_col0" class="data row2 col0" >436</td>
             </tr>
             <tr>
-                        <th id="T_0c084_level0_row3" class="row_heading level0 row3" >64x64_64x64</th>
-                        <td id="T_0c084_row3_col0" class="data row3 col0" >4239</td>
+                        <th id="T_1b5c8_level0_row3" class="row_heading level0 row3" >64x64_64x64</th>
+                        <td id="T_1b5c8_row3_col0" class="data row3 col0" >45</td>
             </tr>
     </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_3a6ce_" ><caption>haskell_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_a95a6_" ><caption>haskell_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_3a6ce_level0_row0" class="row_heading level0 row0" >128x128_128x128</th>
-                        <td id="T_3a6ce_row0_col0" class="data row0 col0" >15172</td>
+                        <th id="T_a95a6_level0_row0" class="row_heading level0 row0" >128x128_128x128</th>
+                        <td id="T_a95a6_row0_col0" class="data row0 col0" >105</td>
             </tr>
             <tr>
-                        <th id="T_3a6ce_level0_row1" class="row_heading level0 row1" >256x256_256x256</th>
-                        <td id="T_3a6ce_row1_col0" class="data row1 col0" >28960</td>
+                        <th id="T_a95a6_level0_row1" class="row_heading level0 row1" >256x256_256x256</th>
+                        <td id="T_a95a6_row1_col0" class="data row1 col0" >215</td>
             </tr>
             <tr>
-                        <th id="T_3a6ce_level0_row2" class="row_heading level0 row2" >512x512_512x512</th>
-                        <td id="T_3a6ce_row2_col0" class="data row2 col0" >13160</td>
+                        <th id="T_a95a6_level0_row2" class="row_heading level0 row2" >512x512_512x512</th>
+                        <td id="T_a95a6_row2_col0" class="data row2 col0" >273</td>
             </tr>
             <tr>
-                        <th id="T_3a6ce_level0_row3" class="row_heading level0 row3" >64x64_64x64</th>
-                        <td id="T_3a6ce_row3_col0" class="data row3 col0" >4894</td>
+                        <th id="T_a95a6_level0_row3" class="row_heading level0 row3" >64x64_64x64</th>
+                        <td id="T_a95a6_row3_col0" class="data row3 col0" >37</td>
             </tr>
     </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_db8d5_" ><caption>fhw_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>        <th class="col_heading level0 col1" >time_IO_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_eb0f5_" ><caption>fhw_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>        <th class="col_heading level0 col1" >time_IO_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_db8d5_level0_row0" class="row_heading level0 row0" >128x128_128x128</th>
-                        <td id="T_db8d5_row0_col0" class="data row0 col0" >502554</td>
-                        <td id="T_db8d5_row0_col1" class="data row0 col1" >724394</td>
+                        <th id="T_eb0f5_level0_row0" class="row_heading level0 row0" >128x128_128x128</th>
+                        <td id="T_eb0f5_row0_col0" class="data row0 col0" >397</td>
+                        <td id="T_eb0f5_row0_col1" class="data row0 col1" >579</td>
             </tr>
             <tr>
-                        <th id="T_db8d5_level0_row1" class="row_heading level0 row1" >256x256_256x256</th>
-                        <td id="T_db8d5_row1_col0" class="data row1 col0" >717819</td>
-                        <td id="T_db8d5_row1_col1" class="data row1 col1" >1046123</td>
+                        <th id="T_eb0f5_level0_row1" class="row_heading level0 row1" >256x256_256x256</th>
+                        <td id="T_eb0f5_row1_col0" class="data row1 col0" >679</td>
+                        <td id="T_eb0f5_row1_col1" class="data row1 col1" >986</td>
             </tr>
             <tr>
-                        <th id="T_db8d5_level0_row2" class="row_heading level0 row2" >512x512_512x512</th>
-                        <td id="T_db8d5_row2_col0" class="data row2 col0" >1000960</td>
-                        <td id="T_db8d5_row2_col1" class="data row2 col1" >1479760</td>
+                        <th id="T_eb0f5_level0_row2" class="row_heading level0 row2" >512x512_512x512</th>
+                        <td id="T_eb0f5_row2_col0" class="data row2 col0" >900</td>
+                        <td id="T_eb0f5_row2_col1" class="data row2 col1" >1330</td>
             </tr>
             <tr>
-                        <th id="T_db8d5_level0_row3" class="row_heading level0 row3" >64x64_64x64</th>
-                        <td id="T_db8d5_row3_col0" class="data row3 col0" >133401</td>
-                        <td id="T_db8d5_row3_col1" class="data row3 col1" >196521</td>
+                        <th id="T_eb0f5_level0_row3" class="row_heading level0 row3" >64x64_64x64</th>
+                        <td id="T_eb0f5_row3_col0" class="data row3 col0" >137</td>
+                        <td id="T_eb0f5_row3_col1" class="data row3 col1" >202</td>
             </tr>
     </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_f2803_" ><caption>fhw</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>        <th class="col_heading level0 col1" >time_IO_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_ff5e4_" ><caption>fhw</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>        <th class="col_heading level0 col1" >time_IO_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_f2803_level0_row0" class="row_heading level0 row0" >128x128_128x128</th>
-                        <td id="T_f2803_row0_col0" class="data row0 col0" >841000</td>
-                        <td id="T_f2803_row0_col1" class="data row0 col1" >1062840</td>
+                        <th id="T_ff5e4_level0_row0" class="row_heading level0 row0" >128x128_128x128</th>
+                        <td id="T_ff5e4_row0_col0" class="data row0 col0" >524</td>
+                        <td id="T_ff5e4_row0_col1" class="data row0 col1" >685</td>
             </tr>
             <tr>
-                        <th id="T_f2803_level0_row1" class="row_heading level0 row1" >256x256_256x256</th>
-                        <td id="T_f2803_row1_col0" class="data row1 col0" >1074942</td>
-                        <td id="T_f2803_row1_col1" class="data row1 col1" >1403246</td>
+                        <th id="T_ff5e4_level0_row1" class="row_heading level0 row1" >256x256_256x256</th>
+                        <td id="T_ff5e4_row1_col0" class="data row1 col0" >1047</td>
+                        <td id="T_ff5e4_row1_col1" class="data row1 col1" >1360</td>
             </tr>
             <tr>
-                        <th id="T_f2803_level0_row2" class="row_heading level0 row2" >512x512_512x512</th>
-                        <td id="T_f2803_row2_col0" class="data row2 col0" >1488855</td>
-                        <td id="T_f2803_row2_col1" class="data row2 col1" >1967655</td>
+                        <th id="T_ff5e4_level0_row2" class="row_heading level0 row2" >512x512_512x512</th>
+                        <td id="T_ff5e4_row2_col0" class="data row2 col0" >1346</td>
+                        <td id="T_ff5e4_row2_col1" class="data row2 col1" >1776</td>
             </tr>
             <tr>
-                        <th id="T_f2803_level0_row3" class="row_heading level0 row3" >64x64_64x64</th>
-                        <td id="T_f2803_row3_col0" class="data row3 col0" >190329</td>
-                        <td id="T_f2803_row3_col1" class="data row3 col1" >253449</td>
+                        <th id="T_ff5e4_level0_row3" class="row_heading level0 row3" >64x64_64x64</th>
+                        <td id="T_ff5e4_row3_col0" class="data row3 col0" >189</td>
+                        <td id="T_ff5e4_row3_col1" class="data row3 col1" >253</td>
             </tr>
     </tbody></table></div></div></div><div align="center">
                     <h2>mMaskAdd</h2>
                   </div><div class="container-fluid"><div class="row"><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_a1431_" ><caption>haskell</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_32c6d_" ><caption>haskell</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_a1431_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
-                        <td id="T_a1431_row0_col0" class="data row0 col0" >8523</td>
+                        <th id="T_32c6d_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
+                        <td id="T_32c6d_row0_col0" class="data row0 col0" >38</td>
             </tr>
             <tr>
-                        <th id="T_a1431_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
-                        <td id="T_a1431_row1_col0" class="data row1 col0" >14575</td>
+                        <th id="T_32c6d_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
+                        <td id="T_32c6d_row1_col0" class="data row1 col0" >48</td>
             </tr>
             <tr>
-                        <th id="T_a1431_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
-                        <td id="T_a1431_row2_col0" class="data row2 col0" >17810</td>
+                        <th id="T_32c6d_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
+                        <td id="T_32c6d_row2_col0" class="data row2 col0" >126</td>
             </tr>
             <tr>
-                        <th id="T_a1431_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
-                        <td id="T_a1431_row3_col0" class="data row3 col0" >3051</td>
+                        <th id="T_32c6d_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
+                        <td id="T_32c6d_row3_col0" class="data row3 col0" >10</td>
             </tr>
     </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_72674_" ><caption>haskell_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_45e80_" ><caption>haskell_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_72674_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
-                        <td id="T_72674_row0_col0" class="data row0 col0" >3168</td>
+                        <th id="T_45e80_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
+                        <td id="T_45e80_row0_col0" class="data row0 col0" >30</td>
             </tr>
             <tr>
-                        <th id="T_72674_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
-                        <td id="T_72674_row1_col0" class="data row1 col0" >4945</td>
+                        <th id="T_45e80_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
+                        <td id="T_45e80_row1_col0" class="data row1 col0" >42</td>
             </tr>
             <tr>
-                        <th id="T_72674_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
-                        <td id="T_72674_row2_col0" class="data row2 col0" >14885</td>
+                        <th id="T_45e80_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
+                        <td id="T_45e80_row2_col0" class="data row2 col0" >75</td>
             </tr>
             <tr>
-                        <th id="T_72674_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
-                        <td id="T_72674_row3_col0" class="data row3 col0" >1534</td>
+                        <th id="T_45e80_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
+                        <td id="T_45e80_row3_col0" class="data row3 col0" >7</td>
             </tr>
     </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_69402_" ><caption>fhw_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>        <th class="col_heading level0 col1" >time_IO_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_16590_" ><caption>fhw_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>        <th class="col_heading level0 col1" >time_IO_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_69402_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
-                        <td id="T_69402_row0_col0" class="data row0 col0" >100607</td>
-                        <td id="T_69402_row0_col1" class="data row0 col1" >332961</td>
+                        <th id="T_16590_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
+                        <td id="T_16590_row0_col0" class="data row0 col0" >75</td>
+                        <td id="T_16590_row0_col1" class="data row0 col1" >291</td>
             </tr>
             <tr>
-                        <th id="T_69402_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
-                        <td id="T_69402_row1_col0" class="data row1 col0" >110889</td>
-                        <td id="T_69402_row1_col1" class="data row1 col1" >445946</td>
+                        <th id="T_16590_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
+                        <td id="T_16590_row1_col0" class="data row1 col0" >104</td>
+                        <td id="T_16590_row1_col1" class="data row1 col1" >456</td>
             </tr>
             <tr>
-                        <th id="T_69402_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
-                        <td id="T_69402_row2_col0" class="data row2 col0" >287039</td>
-                        <td id="T_69402_row2_col1" class="data row2 col1" >765949</td>
+                        <th id="T_16590_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
+                        <td id="T_16590_row2_col0" class="data row2 col0" >299</td>
+                        <td id="T_16590_row2_col1" class="data row2 col1" >729</td>
             </tr>
             <tr>
-                        <th id="T_69402_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
-                        <td id="T_69402_row3_col0" class="data row3 col0" >45360</td>
-                        <td id="T_69402_row3_col1" class="data row3 col1" >109637</td>
+                        <th id="T_16590_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
+                        <td id="T_16590_row3_col0" class="data row3 col0" >46</td>
+                        <td id="T_16590_row3_col1" class="data row3 col1" >111</td>
             </tr>
     </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_c890f_" ><caption>fhw</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>        <th class="col_heading level0 col1" >time_IO_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_ff2d2_" ><caption>fhw</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>        <th class="col_heading level0 col1" >time_IO_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_c890f_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
-                        <td id="T_c890f_row0_col0" class="data row0 col0" >154111</td>
-                        <td id="T_c890f_row0_col1" class="data row0 col1" >386464</td>
+                        <th id="T_ff2d2_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
+                        <td id="T_ff2d2_row0_col0" class="data row0 col0" >117</td>
+                        <td id="T_ff2d2_row0_col1" class="data row0 col1" >322</td>
             </tr>
             <tr>
-                        <th id="T_c890f_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
-                        <td id="T_c890f_row1_col0" class="data row1 col0" >162261</td>
-                        <td id="T_c890f_row1_col1" class="data row1 col1" >497318</td>
+                        <th id="T_ff2d2_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
+                        <td id="T_ff2d2_row1_col0" class="data row1 col0" >168</td>
+                        <td id="T_ff2d2_row1_col1" class="data row1 col1" >497</td>
             </tr>
             <tr>
-                        <th id="T_c890f_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
-                        <td id="T_c890f_row2_col0" class="data row2 col0" >385316</td>
-                        <td id="T_c890f_row2_col1" class="data row2 col1" >864226</td>
+                        <th id="T_ff2d2_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
+                        <td id="T_ff2d2_row2_col0" class="data row2 col0" >400</td>
+                        <td id="T_ff2d2_row2_col1" class="data row2 col1" >762</td>
             </tr>
             <tr>
-                        <th id="T_c890f_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
-                        <td id="T_c890f_row3_col0" class="data row3 col0" >66264</td>
-                        <td id="T_c890f_row3_col1" class="data row3 col1" >131481</td>
+                        <th id="T_ff2d2_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
+                        <td id="T_ff2d2_row3_col0" class="data row3 col0" >64</td>
+                        <td id="T_ff2d2_row3_col1" class="data row3 col1" >133</td>
             </tr>
     </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_06f67_" ><caption>cpp</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_79816_" ><caption>cpp</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_06f67_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
-                        <td id="T_06f67_row0_col0" class="data row0 col0" >49961</td>
+                        <th id="T_79816_level0_row0" class="row_heading level0 row0" >128x128_128x128_128x128</th>
+                        <td id="T_79816_row0_col0" class="data row0 col0" >33</td>
             </tr>
             <tr>
-                        <th id="T_06f67_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
-                        <td id="T_06f67_row1_col0" class="data row1 col0" >52859</td>
+                        <th id="T_79816_level0_row1" class="row_heading level0 row1" >256x256_256x256_256x256</th>
+                        <td id="T_79816_row1_col0" class="data row1 col0" >45</td>
             </tr>
             <tr>
-                        <th id="T_06f67_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
-                        <td id="T_06f67_row2_col0" class="data row2 col0" >55321</td>
+                        <th id="T_79816_level0_row2" class="row_heading level0 row2" >512x512_512x512_512x512</th>
+                        <td id="T_79816_row2_col0" class="data row2 col0" >65</td>
             </tr>
             <tr>
-                        <th id="T_06f67_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
-                        <td id="T_06f67_row3_col0" class="data row3 col0" >20555</td>
+                        <th id="T_79816_level0_row3" class="row_heading level0 row3" >64x64_64x64_64x64</th>
+                        <td id="T_79816_row3_col0" class="data row3 col0" >18</td>
             </tr>
     </tbody></table></div></div></div><div align="center">
                     <h2>mMapKron</h2>
                   </div><div class="container-fluid"><div class="row"><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_87ebc_" ><caption>haskell</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_a48a3_" ><caption>haskell</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_87ebc_level0_row0" class="row_heading level0 row0" >128x128_2x2</th>
-                        <td id="T_87ebc_row0_col0" class="data row0 col0" >23853</td>
+                        <th id="T_a48a3_level0_row0" class="row_heading level0 row0" >128x128_2x2</th>
+                        <td id="T_a48a3_row0_col0" class="data row0 col0" >275</td>
             </tr>
             <tr>
-                        <th id="T_87ebc_level0_row1" class="row_heading level0 row1" >128x128_4x4</th>
-                        <td id="T_87ebc_row1_col0" class="data row1 col0" >38832</td>
+                        <th id="T_a48a3_level0_row1" class="row_heading level0 row1" >128x128_4x4</th>
+                        <td id="T_a48a3_row1_col0" class="data row1 col0" >460</td>
             </tr>
             <tr>
-                        <th id="T_87ebc_level0_row2" class="row_heading level0 row2" >256x256_2x2</th>
-                        <td id="T_87ebc_row2_col0" class="data row2 col0" >79203</td>
+                        <th id="T_a48a3_level0_row2" class="row_heading level0 row2" >256x256_2x2</th>
+                        <td id="T_a48a3_row2_col0" class="data row2 col0" >709</td>
             </tr>
             <tr>
-                        <th id="T_87ebc_level0_row3" class="row_heading level0 row3" >2x2_128x128</th>
-                        <td id="T_87ebc_row3_col0" class="data row3 col0" >14145</td>
+                        <th id="T_a48a3_level0_row3" class="row_heading level0 row3" >2x2_128x128</th>
+                        <td id="T_a48a3_row3_col0" class="data row3 col0" >137</td>
             </tr>
             <tr>
-                        <th id="T_87ebc_level0_row4" class="row_heading level0 row4" >2x2_256x256</th>
-                        <td id="T_87ebc_row4_col0" class="data row4 col0" >49725</td>
+                        <th id="T_a48a3_level0_row4" class="row_heading level0 row4" >2x2_256x256</th>
+                        <td id="T_a48a3_row4_col0" class="data row4 col0" >364</td>
             </tr>
             <tr>
-                        <th id="T_87ebc_level0_row5" class="row_heading level0 row5" >2x2_2x2</th>
-                        <td id="T_87ebc_row5_col0" class="data row5 col0" >150</td>
+                        <th id="T_a48a3_level0_row5" class="row_heading level0 row5" >2x2_2x2</th>
+                        <td id="T_a48a3_row5_col0" class="data row5 col0" >0</td>
             </tr>
             <tr>
-                        <th id="T_87ebc_level0_row6" class="row_heading level0 row6" >2x2_4x4</th>
-                        <td id="T_87ebc_row6_col0" class="data row6 col0" >172</td>
+                        <th id="T_a48a3_level0_row6" class="row_heading level0 row6" >2x2_4x4</th>
+                        <td id="T_a48a3_row6_col0" class="data row6 col0" >0</td>
             </tr>
             <tr>
-                        <th id="T_87ebc_level0_row7" class="row_heading level0 row7" >2x2_64x64</th>
-                        <td id="T_87ebc_row7_col0" class="data row7 col0" >5520</td>
+                        <th id="T_a48a3_level0_row7" class="row_heading level0 row7" >2x2_64x64</th>
+                        <td id="T_a48a3_row7_col0" class="data row7 col0" >64</td>
             </tr>
             <tr>
-                        <th id="T_87ebc_level0_row8" class="row_heading level0 row8" >4x4_128x128</th>
-                        <td id="T_87ebc_row8_col0" class="data row8 col0" >29593</td>
+                        <th id="T_a48a3_level0_row8" class="row_heading level0 row8" >4x4_128x128</th>
+                        <td id="T_a48a3_row8_col0" class="data row8 col0" >302</td>
             </tr>
             <tr>
-                        <th id="T_87ebc_level0_row9" class="row_heading level0 row9" >4x4_2x2</th>
-                        <td id="T_87ebc_row9_col0" class="data row9 col0" >172</td>
+                        <th id="T_a48a3_level0_row9" class="row_heading level0 row9" >4x4_2x2</th>
+                        <td id="T_a48a3_row9_col0" class="data row9 col0" >0</td>
             </tr>
             <tr>
-                        <th id="T_87ebc_level0_row10" class="row_heading level0 row10" >4x4_4x4</th>
-                        <td id="T_87ebc_row10_col0" class="data row10 col0" >200</td>
+                        <th id="T_a48a3_level0_row10" class="row_heading level0 row10" >4x4_4x4</th>
+                        <td id="T_a48a3_row10_col0" class="data row10 col0" >0</td>
             </tr>
             <tr>
-                        <th id="T_87ebc_level0_row11" class="row_heading level0 row11" >4x4_64x64</th>
-                        <td id="T_87ebc_row11_col0" class="data row11 col0" >15296</td>
+                        <th id="T_a48a3_level0_row11" class="row_heading level0 row11" >4x4_64x64</th>
+                        <td id="T_a48a3_row11_col0" class="data row11 col0" >98</td>
             </tr>
             <tr>
-                        <th id="T_87ebc_level0_row12" class="row_heading level0 row12" >64x64_2x2</th>
-                        <td id="T_87ebc_row12_col0" class="data row12 col0" >13581</td>
+                        <th id="T_a48a3_level0_row12" class="row_heading level0 row12" >64x64_2x2</th>
+                        <td id="T_a48a3_row12_col0" class="data row12 col0" >84</td>
             </tr>
             <tr>
-                        <th id="T_87ebc_level0_row13" class="row_heading level0 row13" >64x64_4x4</th>
-                        <td id="T_87ebc_row13_col0" class="data row13 col0" >19132</td>
+                        <th id="T_a48a3_level0_row13" class="row_heading level0 row13" >64x64_4x4</th>
+                        <td id="T_a48a3_row13_col0" class="data row13 col0" >121</td>
             </tr>
     </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_4d344_" ><caption>haskell_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_7dc82_" ><caption>haskell_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_4d344_level0_row0" class="row_heading level0 row0" >128x128_2x2</th>
-                        <td id="T_4d344_row0_col0" class="data row0 col0" >12415</td>
+                        <th id="T_7dc82_level0_row0" class="row_heading level0 row0" >128x128_2x2</th>
+                        <td id="T_7dc82_row0_col0" class="data row0 col0" >85</td>
             </tr>
             <tr>
-                        <th id="T_4d344_level0_row1" class="row_heading level0 row1" >128x128_4x4</th>
-                        <td id="T_4d344_row1_col0" class="data row1 col0" >12098</td>
+                        <th id="T_7dc82_level0_row1" class="row_heading level0 row1" >128x128_4x4</th>
+                        <td id="T_7dc82_row1_col0" class="data row1 col0" >151</td>
             </tr>
             <tr>
-                        <th id="T_4d344_level0_row2" class="row_heading level0 row2" >256x256_2x2</th>
-                        <td id="T_4d344_row2_col0" class="data row2 col0" >27139</td>
+                        <th id="T_7dc82_level0_row2" class="row_heading level0 row2" >256x256_2x2</th>
+                        <td id="T_7dc82_row2_col0" class="data row2 col0" >232</td>
             </tr>
             <tr>
-                        <th id="T_4d344_level0_row3" class="row_heading level0 row3" >2x2_128x128</th>
-                        <td id="T_4d344_row3_col0" class="data row3 col0" >7041</td>
+                        <th id="T_7dc82_level0_row3" class="row_heading level0 row3" >2x2_128x128</th>
+                        <td id="T_7dc82_row3_col0" class="data row3 col0" >68</td>
             </tr>
             <tr>
-                        <th id="T_4d344_level0_row4" class="row_heading level0 row4" >2x2_256x256</th>
-                        <td id="T_4d344_row4_col0" class="data row4 col0" >18928</td>
+                        <th id="T_7dc82_level0_row4" class="row_heading level0 row4" >2x2_256x256</th>
+                        <td id="T_7dc82_row4_col0" class="data row4 col0" >126</td>
             </tr>
             <tr>
-                        <th id="T_4d344_level0_row5" class="row_heading level0 row5" >2x2_2x2</th>
-                        <td id="T_4d344_row5_col0" class="data row5 col0" >80</td>
+                        <th id="T_7dc82_level0_row5" class="row_heading level0 row5" >2x2_2x2</th>
+                        <td id="T_7dc82_row5_col0" class="data row5 col0" >0</td>
             </tr>
             <tr>
-                        <th id="T_4d344_level0_row6" class="row_heading level0 row6" >2x2_4x4</th>
-                        <td id="T_4d344_row6_col0" class="data row6 col0" >80</td>
+                        <th id="T_7dc82_level0_row6" class="row_heading level0 row6" >2x2_4x4</th>
+                        <td id="T_7dc82_row6_col0" class="data row6 col0" >0</td>
             </tr>
             <tr>
-                        <th id="T_4d344_level0_row7" class="row_heading level0 row7" >2x2_64x64</th>
-                        <td id="T_4d344_row7_col0" class="data row7 col0" >3525</td>
+                        <th id="T_7dc82_level0_row7" class="row_heading level0 row7" >2x2_64x64</th>
+                        <td id="T_7dc82_row7_col0" class="data row7 col0" >36</td>
             </tr>
             <tr>
-                        <th id="T_4d344_level0_row8" class="row_heading level0 row8" >4x4_128x128</th>
-                        <td id="T_4d344_row8_col0" class="data row8 col0" >10426</td>
+                        <th id="T_7dc82_level0_row8" class="row_heading level0 row8" >4x4_128x128</th>
+                        <td id="T_7dc82_row8_col0" class="data row8 col0" >94</td>
             </tr>
             <tr>
-                        <th id="T_4d344_level0_row9" class="row_heading level0 row9" >4x4_2x2</th>
-                        <td id="T_4d344_row9_col0" class="data row9 col0" >105</td>
+                        <th id="T_7dc82_level0_row9" class="row_heading level0 row9" >4x4_2x2</th>
+                        <td id="T_7dc82_row9_col0" class="data row9 col0" >0</td>
             </tr>
             <tr>
-                        <th id="T_4d344_level0_row10" class="row_heading level0 row10" >4x4_4x4</th>
-                        <td id="T_4d344_row10_col0" class="data row10 col0" >105</td>
+                        <th id="T_7dc82_level0_row10" class="row_heading level0 row10" >4x4_4x4</th>
+                        <td id="T_7dc82_row10_col0" class="data row10 col0" >0</td>
             </tr>
             <tr>
-                        <th id="T_4d344_level0_row11" class="row_heading level0 row11" >4x4_64x64</th>
-                        <td id="T_4d344_row11_col0" class="data row11 col0" >5320</td>
+                        <th id="T_7dc82_level0_row11" class="row_heading level0 row11" >4x4_64x64</th>
+                        <td id="T_7dc82_row11_col0" class="data row11 col0" >40</td>
             </tr>
             <tr>
-                        <th id="T_4d344_level0_row12" class="row_heading level0 row12" >64x64_2x2</th>
-                        <td id="T_4d344_row12_col0" class="data row12 col0" >7729</td>
+                        <th id="T_7dc82_level0_row12" class="row_heading level0 row12" >64x64_2x2</th>
+                        <td id="T_7dc82_row12_col0" class="data row12 col0" >35</td>
             </tr>
             <tr>
-                        <th id="T_4d344_level0_row13" class="row_heading level0 row13" >64x64_4x4</th>
-                        <td id="T_4d344_row13_col0" class="data row13 col0" >8368</td>
+                        <th id="T_7dc82_level0_row13" class="row_heading level0 row13" >64x64_4x4</th>
+                        <td id="T_7dc82_row13_col0" class="data row13 col0" >40</td>
             </tr>
     </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_96912_" ><caption>fhw_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>        <th class="col_heading level0 col1" >time_IO_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_2bb1a_" ><caption>fhw_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>        <th class="col_heading level0 col1" >time_IO_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_96912_level0_row0" class="row_heading level0 row0" >128x128_2x2</th>
-                        <td id="T_96912_row0_col0" class="data row0 col0" >312387</td>
-                        <td id="T_96912_row0_col1" class="data row0 col1" >384131</td>
+                        <th id="T_2bb1a_level0_row0" class="row_heading level0 row0" >128x128_2x2</th>
+                        <td id="T_2bb1a_row0_col0" class="data row0 col0" >370</td>
+                        <td id="T_2bb1a_row0_col1" class="data row0 col1" >449</td>
             </tr>
             <tr>
-                        <th id="T_96912_level0_row1" class="row_heading level0 row1" >128x128_4x4</th>
-                        <td id="T_96912_row1_col0" class="data row1 col0" >490879</td>
-                        <td id="T_96912_row1_col1" class="data row1 col1" >562803</td>
+                        <th id="T_2bb1a_level0_row1" class="row_heading level0 row1" >128x128_4x4</th>
+                        <td id="T_2bb1a_row1_col0" class="data row1 col0" >556</td>
+                        <td id="T_2bb1a_row1_col1" class="data row1 col1" >649</td>
             </tr>
             <tr>
-                        <th id="T_96912_level0_row2" class="row_heading level0 row2" >256x256_2x2</th>
-                        <td id="T_96912_row2_col0" class="data row2 col0" >835096</td>
-                        <td id="T_96912_row2_col1" class="data row2 col1" >999408</td>
+                        <th id="T_2bb1a_level0_row2" class="row_heading level0 row2" >256x256_2x2</th>
+                        <td id="T_2bb1a_row2_col0" class="data row2 col0" >847</td>
+                        <td id="T_2bb1a_row2_col1" class="data row2 col1" >1041</td>
             </tr>
             <tr>
-                        <th id="T_96912_level0_row3" class="row_heading level0 row3" >2x2_128x128</th>
-                        <td id="T_96912_row3_col0" class="data row3 col0" >231679</td>
-                        <td id="T_96912_row3_col1" class="data row3 col1" >303423</td>
+                        <th id="T_2bb1a_level0_row3" class="row_heading level0 row3" >2x2_128x128</th>
+                        <td id="T_2bb1a_row3_col0" class="data row3 col0" >199</td>
+                        <td id="T_2bb1a_row3_col1" class="data row3 col1" >266</td>
             </tr>
             <tr>
-                        <th id="T_96912_level0_row4" class="row_heading level0 row4" >2x2_256x256</th>
-                        <td id="T_96912_row4_col0" class="data row4 col0" >535291</td>
-                        <td id="T_96912_row4_col1" class="data row4 col1" >699603</td>
+                        <th id="T_2bb1a_level0_row4" class="row_heading level0 row4" >2x2_256x256</th>
+                        <td id="T_2bb1a_row4_col0" class="data row4 col0" >449</td>
+                        <td id="T_2bb1a_row4_col1" class="data row4 col1" >635</td>
             </tr>
             <tr>
-                        <th id="T_96912_level0_row5" class="row_heading level0 row5" >2x2_2x2</th>
-                        <td id="T_96912_row5_col0" class="data row5 col0" >915</td>
-                        <td id="T_96912_row5_col1" class="data row5 col1" >1235</td>
+                        <th id="T_2bb1a_level0_row5" class="row_heading level0 row5" >2x2_2x2</th>
+                        <td id="T_2bb1a_row5_col0" class="data row5 col0" >0</td>
+                        <td id="T_2bb1a_row5_col1" class="data row5 col1" >1</td>
             </tr>
             <tr>
-                        <th id="T_96912_level0_row6" class="row_heading level0 row6" >2x2_4x4</th>
-                        <td id="T_96912_row6_col0" class="data row6 col0" >1465</td>
-                        <td id="T_96912_row6_col1" class="data row6 col1" >1965</td>
+                        <th id="T_2bb1a_level0_row6" class="row_heading level0 row6" >2x2_4x4</th>
+                        <td id="T_2bb1a_row6_col0" class="data row6 col0" >1</td>
+                        <td id="T_2bb1a_row6_col1" class="data row6 col1" >1</td>
             </tr>
             <tr>
-                        <th id="T_96912_level0_row7" class="row_heading level0 row7" >2x2_64x64</th>
-                        <td id="T_96912_row7_col0" class="data row7 col0" >101655</td>
-                        <td id="T_96912_row7_col1" class="data row7 col1" >133375</td>
+                        <th id="T_2bb1a_level0_row7" class="row_heading level0 row7" >2x2_64x64</th>
+                        <td id="T_2bb1a_row7_col0" class="data row7 col0" >94</td>
+                        <td id="T_2bb1a_row7_col1" class="data row7 col1" >125</td>
             </tr>
             <tr>
-                        <th id="T_96912_level0_row8" class="row_heading level0 row8" >4x4_128x128</th>
-                        <td id="T_96912_row8_col0" class="data row8 col0" >375197</td>
-                        <td id="T_96912_row8_col1" class="data row8 col1" >447121</td>
+                        <th id="T_2bb1a_level0_row8" class="row_heading level0 row8" >4x4_128x128</th>
+                        <td id="T_2bb1a_row8_col0" class="data row8 col0" >330</td>
+                        <td id="T_2bb1a_row8_col1" class="data row8 col1" >401</td>
             </tr>
             <tr>
-                        <th id="T_96912_level0_row9" class="row_heading level0 row9" >4x4_2x2</th>
-                        <td id="T_96912_row9_col0" class="data row9 col0" >1595</td>
-                        <td id="T_96912_row9_col1" class="data row9 col1" >2095</td>
+                        <th id="T_2bb1a_level0_row9" class="row_heading level0 row9" >4x4_2x2</th>
+                        <td id="T_2bb1a_row9_col0" class="data row9 col0" >1</td>
+                        <td id="T_2bb1a_row9_col1" class="data row9 col1" >1</td>
             </tr>
             <tr>
-                        <th id="T_96912_level0_row10" class="row_heading level0 row10" >4x4_4x4</th>
-                        <td id="T_96912_row10_col0" class="data row10 col0" >2345</td>
-                        <td id="T_96912_row10_col1" class="data row10 col1" >3025</td>
+                        <th id="T_2bb1a_level0_row10" class="row_heading level0 row10" >4x4_4x4</th>
+                        <td id="T_2bb1a_row10_col0" class="data row10 col0" >2</td>
+                        <td id="T_2bb1a_row10_col1" class="data row10 col1" >2</td>
             </tr>
             <tr>
-                        <th id="T_96912_level0_row11" class="row_heading level0 row11" >4x4_64x64</th>
-                        <td id="T_96912_row11_col0" class="data row11 col0" >165125</td>
-                        <td id="T_96912_row11_col1" class="data row11 col1" >197025</td>
+                        <th id="T_2bb1a_level0_row11" class="row_heading level0 row11" >4x4_64x64</th>
+                        <td id="T_2bb1a_row11_col0" class="data row11 col0" >155</td>
+                        <td id="T_2bb1a_row11_col1" class="data row11 col1" >186</td>
             </tr>
             <tr>
-                        <th id="T_96912_level0_row12" class="row_heading level0 row12" >64x64_2x2</th>
-                        <td id="T_96912_row12_col0" class="data row12 col0" >141730</td>
-                        <td id="T_96912_row12_col1" class="data row12 col1" >173450</td>
+                        <th id="T_2bb1a_level0_row12" class="row_heading level0 row12" >64x64_2x2</th>
+                        <td id="T_2bb1a_row12_col0" class="data row12 col0" >135</td>
+                        <td id="T_2bb1a_row12_col1" class="data row12 col1" >167</td>
             </tr>
             <tr>
-                        <th id="T_96912_level0_row13" class="row_heading level0 row13" >64x64_4x4</th>
-                        <td id="T_96912_row13_col0" class="data row13 col0" >225291</td>
-                        <td id="T_96912_row13_col1" class="data row13 col1" >257191</td>
+                        <th id="T_2bb1a_level0_row13" class="row_heading level0 row13" >64x64_4x4</th>
+                        <td id="T_2bb1a_row13_col0" class="data row13 col0" >207</td>
+                        <td id="T_2bb1a_row13_col1" class="data row13 col1" >239</td>
             </tr>
     </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
-</style><table class="table table-striped table-sm" id="T_f321c_" ><caption>fhw</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ns</th>        <th class="col_heading level0 col1" >time_IO_ns</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
+</style><table class="table table-striped table-sm" id="T_20f09_" ><caption>fhw</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_us</th>        <th class="col_heading level0 col1" >time_IO_us</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>        <th class="blank" ></th>    </tr></thead><tbody>
                 <tr>
-                        <th id="T_f321c_level0_row0" class="row_heading level0 row0" >128x128_2x2</th>
-                        <td id="T_f321c_row0_col0" class="data row0 col0" >643641</td>
-                        <td id="T_f321c_row0_col1" class="data row0 col1" >715385</td>
+                        <th id="T_20f09_level0_row0" class="row_heading level0 row0" >128x128_2x2</th>
+                        <td id="T_20f09_row0_col0" class="data row0 col0" >758</td>
+                        <td id="T_20f09_row0_col1" class="data row0 col1" >836</td>
             </tr>
             <tr>
-                        <th id="T_f321c_level0_row1" class="row_heading level0 row1" >128x128_4x4</th>
-                        <td id="T_f321c_row1_col0" class="data row1 col0" >1009837</td>
-                        <td id="T_f321c_row1_col1" class="data row1 col1" >1081761</td>
+                        <th id="T_20f09_level0_row1" class="row_heading level0 row1" >128x128_4x4</th>
+                        <td id="T_20f09_row1_col0" class="data row1 col0" >1097</td>
+                        <td id="T_20f09_row1_col1" class="data row1 col1" >1201</td>
             </tr>
             <tr>
-                        <th id="T_f321c_level0_row2" class="row_heading level0 row2" >256x256_2x2</th>
-                        <td id="T_f321c_row2_col0" class="data row2 col0" >1735718</td>
-                        <td id="T_f321c_row2_col1" class="data row2 col1" >1900030</td>
+                        <th id="T_20f09_level0_row2" class="row_heading level0 row2" >256x256_2x2</th>
+                        <td id="T_20f09_row2_col0" class="data row2 col0" >1770</td>
+                        <td id="T_20f09_row2_col1" class="data row2 col1" >1971</td>
             </tr>
             <tr>
-                        <th id="T_f321c_level0_row3" class="row_heading level0 row3" >2x2_128x128</th>
-                        <td id="T_f321c_row3_col0" class="data row3 col0" >514532</td>
-                        <td id="T_f321c_row3_col1" class="data row3 col1" >586276</td>
+                        <th id="T_20f09_level0_row3" class="row_heading level0 row3" >2x2_128x128</th>
+                        <td id="T_20f09_row3_col0" class="data row3 col0" >434</td>
+                        <td id="T_20f09_row3_col1" class="data row3 col1" >502</td>
             </tr>
             <tr>
-                        <th id="T_f321c_level0_row4" class="row_heading level0 row4" >2x2_256x256</th>
-                        <td id="T_f321c_row4_col0" class="data row4 col0" >1230721</td>
-                        <td id="T_f321c_row4_col1" class="data row4 col1" >1395033</td>
+                        <th id="T_20f09_level0_row4" class="row_heading level0 row4" >2x2_256x256</th>
+                        <td id="T_20f09_row4_col0" class="data row4 col0" >1004</td>
+                        <td id="T_20f09_row4_col1" class="data row4 col1" >1188</td>
             </tr>
             <tr>
-                        <th id="T_f321c_level0_row5" class="row_heading level0 row5" >2x2_2x2</th>
-                        <td id="T_f321c_row5_col0" class="data row5 col0" >1890</td>
-                        <td id="T_f321c_row5_col1" class="data row5 col1" >2210</td>
+                        <th id="T_20f09_level0_row5" class="row_heading level0 row5" >2x2_2x2</th>
+                        <td id="T_20f09_row5_col0" class="data row5 col0" >1</td>
+                        <td id="T_20f09_row5_col1" class="data row5 col1" >1</td>
             </tr>
             <tr>
-                        <th id="T_f321c_level0_row6" class="row_heading level0 row6" >2x2_4x4</th>
-                        <td id="T_f321c_row6_col0" class="data row6 col0" >3043</td>
-                        <td id="T_f321c_row6_col1" class="data row6 col1" >3543</td>
+                        <th id="T_20f09_level0_row6" class="row_heading level0 row6" >2x2_4x4</th>
+                        <td id="T_20f09_row6_col0" class="data row6 col0" >2</td>
+                        <td id="T_20f09_row6_col1" class="data row6 col1" >3</td>
             </tr>
             <tr>
-                        <th id="T_f321c_level0_row7" class="row_heading level0 row7" >2x2_64x64</th>
-                        <td id="T_f321c_row7_col0" class="data row7 col0" >224867</td>
-                        <td id="T_f321c_row7_col1" class="data row7 col1" >256587</td>
+                        <th id="T_20f09_level0_row7" class="row_heading level0 row7" >2x2_64x64</th>
+                        <td id="T_20f09_row7_col0" class="data row7 col0" >211</td>
+                        <td id="T_20f09_row7_col1" class="data row7 col1" >242</td>
             </tr>
             <tr>
-                        <th id="T_f321c_level0_row8" class="row_heading level0 row8" >4x4_128x128</th>
-                        <td id="T_f321c_row8_col0" class="data row8 col0" >811390</td>
-                        <td id="T_f321c_row8_col1" class="data row8 col1" >883314</td>
+                        <th id="T_20f09_level0_row8" class="row_heading level0 row8" >4x4_128x128</th>
+                        <td id="T_20f09_row8_col0" class="data row8 col0" >694</td>
+                        <td id="T_20f09_row8_col1" class="data row8 col1" >763</td>
             </tr>
             <tr>
-                        <th id="T_f321c_level0_row9" class="row_heading level0 row9" >4x4_2x2</th>
-                        <td id="T_f321c_row9_col0" class="data row9 col0" >3233</td>
-                        <td id="T_f321c_row9_col1" class="data row9 col1" >3733</td>
+                        <th id="T_20f09_level0_row9" class="row_heading level0 row9" >4x4_2x2</th>
+                        <td id="T_20f09_row9_col0" class="data row9 col0" >2</td>
+                        <td id="T_20f09_row9_col1" class="data row9 col1" >3</td>
             </tr>
             <tr>
-                        <th id="T_f321c_level0_row10" class="row_heading level0 row10" >4x4_4x4</th>
-                        <td id="T_f321c_row10_col0" class="data row10 col0" >4610</td>
-                        <td id="T_f321c_row10_col1" class="data row10 col1" >5290</td>
+                        <th id="T_20f09_level0_row10" class="row_heading level0 row10" >4x4_4x4</th>
+                        <td id="T_20f09_row10_col0" class="data row10 col0" >4</td>
+                        <td id="T_20f09_row10_col1" class="data row10 col1" >5</td>
             </tr>
             <tr>
-                        <th id="T_f321c_level0_row11" class="row_heading level0 row11" >4x4_64x64</th>
-                        <td id="T_f321c_row11_col0" class="data row11 col0" >356370</td>
-                        <td id="T_f321c_row11_col1" class="data row11 col1" >388270</td>
+                        <th id="T_20f09_level0_row11" class="row_heading level0 row11" >4x4_64x64</th>
+                        <td id="T_20f09_row11_col0" class="data row11 col0" >337</td>
+                        <td id="T_20f09_row11_col1" class="data row11 col1" >368</td>
             </tr>
             <tr>
-                        <th id="T_f321c_level0_row12" class="row_heading level0 row12" >64x64_2x2</th>
-                        <td id="T_f321c_row12_col0" class="data row12 col0" >289557</td>
-                        <td id="T_f321c_row12_col1" class="data row12 col1" >321277</td>
+                        <th id="T_20f09_level0_row12" class="row_heading level0 row12" >64x64_2x2</th>
+                        <td id="T_20f09_row12_col0" class="data row12 col0" >275</td>
+                        <td id="T_20f09_row12_col1" class="data row12 col1" >307</td>
             </tr>
             <tr>
-                        <th id="T_f321c_level0_row13" class="row_heading level0 row13" >64x64_4x4</th>
-                        <td id="T_f321c_row13_col0" class="data row13 col0" >461118</td>
-                        <td id="T_f321c_row13_col1" class="data row13 col1" >493018</td>
+                        <th id="T_20f09_level0_row13" class="row_heading level0 row13" >64x64_4x4</th>
+                        <td id="T_20f09_row13_col0" class="data row13 col0" >421</td>
+                        <td id="T_20f09_row13_col1" class="data row13 col1" >453</td>
             </tr>
-    </tbody></table></div></div></div></html>
+    </tbody></table></div></div></div>
+    
+    <div align="center">
+                    <h2>mAddAddBigDS</h2>
+                  </div><div class="container-fluid"><div class="row"><div class="col-sm-auto"><style  type="text/css" >
+</style><table class="table table-striped table-sm" id="T_af071_" ><caption>haskell_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ms</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+                <tr>
+                        <th id="T_af071_level0_row0" class="row_heading level0 row0" >262144x262144_262144x262144_262144x262144</th>
+                        <td id="T_af071_row0_col0" class="data row0 col0" >218</td>
+            </tr>
+    </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
+</style><table class="table table-striped table-sm" id="T_4cdf9_" ><caption>haskell</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ms</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+                <tr>
+                        <th id="T_4cdf9_level0_row0" class="row_heading level0 row0" >262144x262144_262144x262144_262144x262144</th>
+                        <td id="T_4cdf9_row0_col0" class="data row0 col0" >249</td>
+            </tr>
+    </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
+</style><table class="table table-striped table-sm" id="T_bcb32_" ><caption>cpp</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ms</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+                <tr>
+                        <th id="T_bcb32_level0_row0" class="row_heading level0 row0" >262144x262144_262144x262144_262144x262144</th>
+                        <td id="T_bcb32_row0_col0" class="data row0 col0" >8</td>
+            </tr>
+    </tbody></table></div></div></div><div align="center">
+                    <h2>mMaskAddBigDS</h2>
+                  </div><div class="container-fluid"><div class="row"><div class="col-sm-auto"><style  type="text/css" >
+</style><table class="table table-striped table-sm" id="T_e12d9_" ><caption>haskell_distilled</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ms</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+                <tr>
+                        <th id="T_e12d9_level0_row0" class="row_heading level0 row0" >262144x262144_262144x262144_262144x262144</th>
+                        <td id="T_e12d9_row0_col0" class="data row0 col0" >60</td>
+            </tr>
+    </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
+</style><table class="table table-striped table-sm" id="T_f1dbc_" ><caption>haskell</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ms</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+                <tr>
+                        <th id="T_f1dbc_level0_row0" class="row_heading level0 row0" >262144x262144_262144x262144_262144x262144</th>
+                        <td id="T_f1dbc_row0_col0" class="data row0 col0" >90</td>
+            </tr>
+    </tbody></table></div><div class="col-sm-auto"><style  type="text/css" >
+</style><table class="table table-striped table-sm" id="T_7812f_" ><caption>cpp</caption><thead>    <tr>        <th class="blank level0" ></th>        <th class="col_heading level0 col0" >time_ms</th>    </tr>    <tr>        <th class="index_name level0" >sizes</th>        <th class="blank" ></th>    </tr></thead><tbody>
+                <tr>
+                        <th id="T_7812f_level0_row0" class="row_heading level0 row0" >262144x262144_262144x262144_262144x262144</th>
+                        <td id="T_7812f_row0_col0" class="data row0 col0" >4</td>
+            </tr>
+    </tbody></table></div></div></div>
